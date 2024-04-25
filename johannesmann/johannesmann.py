@@ -74,7 +74,7 @@ class Tessellation:
             Id of the tile the point is placed on.
         """
         aboves = [line.above(x, y) for line in self.lines]
-        return sum(int(2 ** exp) * bit for exp, bit in enumerate(aboves))
+        return sum(2 ** exp * int(bit) for exp, bit in enumerate(aboves))
 
     def sample_2d(self, x_samples: int, y_samples: int) -> NDArray:
         """Sample the rectangular region in equidistant steps and return an
