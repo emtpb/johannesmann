@@ -76,13 +76,15 @@ class Tessellation:
         aboves = [line.above(x, y) for line in self.lines]
         return sum(2 ** exp * int(bit) for exp, bit in enumerate(aboves))
 
-    def sample_2d(self, x_samples: int, y_samples: int) -> NDArray:
+    def sample_2d(self, x_samples: int, y_samples: int,
+                  squash_ids: bool = False) -> NDArray:
         """Sample the rectangular region in equidistant steps and return an
         array of tile ids.
 
         Args:
             x_samples: Number of samples in x direction.
             y_samples: Number of samples in y direction.
+            squash_ids: Squash the range of tile ids by removing unused ones.
 
         Returns:
             Array of tile ids.
@@ -105,5 +107,9 @@ class Tessellation:
         result = np.zeros((x_samples, y_samples))
         for idx, x in np.ndenumerate(xs):
             result[idx] = self.tile_id(x, ys[idx])
+
+        if squash_ids is True:
+            _, result = np.unique(result, return_inverse=True)
+            result = result.reshape((x_samples, y_samples))
 
         return result
