@@ -9,13 +9,13 @@ at `Paderborn University`_, Germany.
 .. _Paderborn University: https://www.uni-paderborn.de/
 
 
-Development Lead
-================
+Honorary Development Lead
+=========================
 
-* Leander Claes <claes@emt.uni-paderborn.de>
+* Sarah Johannesmann <johannesmann@emt.uni-paderborn.de>
 
 
 Contributors
 ============
 
-None yet. Why not be the first?
+* Leander Claes <claes@emt.uni-paderborn.de>
