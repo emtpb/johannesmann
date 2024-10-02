@@ -9,9 +9,13 @@ This project follows the guidelines of `Keep a changelog`_ and adheres to
 .. _Semantic versioning: https://semver.org/
 
 
-[Unreleased]
-============
+`0.1.0`_ - 2024-10-07
+=====================
 
 Added
 -----
-* Initial implementation (preview).
+* Implementation of two-dimensions.
+* Single point and grid sampling methods.
+
+
+.. _0.1.0: https://github.com/emtpb/johannesmann/releases/tag/0.1.0
