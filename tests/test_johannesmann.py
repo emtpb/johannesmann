@@ -7,7 +7,7 @@ def test_line():
     line = johannesmann.Line(0, 0)
     assert line.slope == 0
     assert line.above(0, 1)
-    assert ~line.above(0, -1)
+    assert not line.above(0, -1)
 
 
 def test_tessellation():
