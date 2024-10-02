@@ -143,7 +143,7 @@ class Tessellation:
         aboves = self.search_tree(self.lines, x, y)
         return sum(int(2 ** exp * bit) for exp, bit in enumerate(aboves))
 
-    def sample_2d(self, x_samples: int, y_samples: int,
+    def tile_id_grid(self, x_samples: int, y_samples: int,
                   squash_ids: bool = False) -> NDArray[np.int_]:
         """Sample the rectangular region in equidistant steps and return an
         array of tile ids.
