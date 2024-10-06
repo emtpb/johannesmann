@@ -62,7 +62,6 @@ class Tessellation:
         """
         self.x_range = x_range
         self.y_range = y_range
-        self.cuts = cuts
 
         self.lines = None
 
