@@ -17,6 +17,7 @@ classifiers = [
 ]
 # Runtime dependencies
 dependencies = [
+    "numpy",
 ]
 
 [project.optional-dependencies]
